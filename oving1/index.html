@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Webutvikling IT2810</title>
+</head>
+<body>
+  <div class="page">
+    <div class="title">
+      <h1 class="title-name">Webutvikling IT2810 - Project 1</h1>
+    </div>
+    <div class="menu">
+      <button id="documentation">Documentation</button>
+      <button id="addShapes">Add shapes</button>
+      <div class="shapes">
+        <button id="circles" class="addCircles">Add circles</button>
+        <button id="squares" class="addSquares">Add squares</button>
+      </div>
+      <button id="changeColors">Change colors</button>
+      <div class="colors">
+        <button id="randomColors">Get random colors</button>
+        <button id="changeBackground">Change canvas background</button>
+        <p class="colorpicker">Pick a color</p>
+        <input id="chooseColors" type="color" value="#ff2def"></input>
+      </div>
+    </div>
+    <div class="picture">
+      <canvas id="myPicture" width="600" height="450"></canvas>
+      <h3>Dalvasor Sali's "Chaos In symmetry"</h3>
+      <p>
+        Dalvasor Sali is revolutionary artist from Spain whose general idea is that the viewer of the art should have as much freedom as possible when viewing his artwork.
+        What he means by that, is that he provides the structures and general idea, but the viewer should be able to capture the color combination that they want.
+        He also focuses a lot on the shapes that he creates, so that they have some sort of unchaotic feel to it. The artwork above, everything is symmetrical, but when you
+        add the colors to it, you add the chaotic element to it. And that's what Dalvasor Sali's art is all about.
+      </p>
+    </div>
+    <div class="documentation">
+      <h2>Documentation</h2>
+      <h3>CSS Grid vs. Flexbox</h3>
+      <p>
+        When designing a website, a useful tool for structuring the overall layout of the page are grids. Grids are a way to partition the page
+        into different blocks.This way you can assign different parts of the HTML to a specific block(s) of the page. Two ways of doing this is
+        by using CSS Grid and/or CSS Flexbox. CSS Grid creates a two dimensional Grid with both rows and columns. You can also decide what size
+        each row and column is, or if you want to adjust itself, it can also do that. A Flexbox is a one dimensional grid where you control only
+        one row ore one column. A flexbox makes it easier to control the elements inside the row or column, such as deciding where to align the content, start,
+        end or stretch out the entire row. In short, a Flexox is used when you only care about row <i>or</i> color, whereas a Grid is used when you care about both.
+        <br /><br /> For my page, I have created a 2x2 grid, where the title row is a flexbox spanning both columns, and the menu is also a flexbox inside the first
+        column in the second row. This made it relatively ease to control the elements inside each of the grid items.
+      </p>
+      <h3>HTML canvas & SVG </h3>
+      <p>
+        Scalable Vector Graphics(SVG) and canvas are two ways in HTML to create graphics and visual objects in HTML. A canvas is basically like a real life canvas
+        where you can draw a line with a certain thickness, and then the canvas has no knowledge of what you drew or what exists in it. If you want the ability to
+        change the canvas in any way, you have to keep track of the shapes in a separate script. In SVG, however, you can keep track of all the objects you have
+        in your graphic, and make references to them in an easy way. It does not require any Javascript to change it, so you can more easily add interactivity.
+        Because of this, scaling the graphic is very easy compared to a canvas. A disadvantage with SVG is that it does not do very well when you have a lot of elements,
+        as you have to keep track of all the elements in memory, whereas with a canvas you do not.
+      </p>
+      <h3>jQuery</h3>
+      <p>
+        jQuery is a popular and useful framework built for JavaScript. jQuery makes it quicker and easier to build JavaScript webpages and web applications.
+        Look at jQuery as a function rather than a language. These functions include; adding animated effects to elements, manipulating the Document Object Model(DOM), and much more!
+        jQuery makes it really easy to write JavaScript compatible with several different browsers. The usual incompatibilities you could experience between popular browsers, which
+        meant that you often had to write different chunks of JavaScript code for each browser, is non-existent using jQuery. Just call the appropriate jQuery function and jQuery will
+        make sure the code runs on the current browser.<br /><br />For my application I used jQuery for all the different buttons' funcitonality, as well as changing the styling when I felt
+        it made sense to improve the overall look of the page and its functionality.
+      </p>
+      <h3>Cross browser testing</h3>
+      <p>
+        Cross browser testing is the practice of testing your web application in different browser. This includes comparing the appearance
+        of the application in the different browsers, as well as the functionality differences in the browsers. This is extremely important
+        as there are many different browsers, that also behave differently. When testing my own application on Chrome, Safari and Firefox,
+        i observed that the color picker input was different in all the browsers. In Chrome you can change the colors once you move the pointer,
+        but in Firefox you had to exit the input window. In Safari there is no input window at all, but there is an input window containing hexadecimal
+        values for the color that is currently picked. Other than the color picker differnce, the application looked and worked similarly in the browsers.
+      </p>
+
+      <h3>Sources</h3>
+      <p>
+        <ul>
+          <li>
+            https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout : Helpful for understanding the differences between
+            CSS Grid and Flexbox. Really helpful for understanding the different values you can set such as grid-template-(column/rows)
+            that assigns the different values to the grid blocks in the container
+          </li>
+          <li>
+            https://www.w3schools.com/ A very good tutorial for simple HTML and CSS. You get very good description on how to do different functionality and styling.
+            I use it a lot whenever I forget simple syntax, as well as learning new functions.
+          </li>
+          <li>
+            https://developer.mozilla.org/
+          </li>
+          <li>
+            https://www.sitepoint.com/canvas-vs-svg-choosing-the-right-tool-for-the-job/ Made it easier to understand the differences between canvas and SVG
+          </li>
+          <li>
+            https://stackoverflow.com/ I use stack overflow whenever I am unsure as to how I should implement something, or if I cannot figure what I have done wrong if there is a bug.
+          </li>
+        </ul>
+      </p>
+
+    </div>
+  </div>
+  <script src="code.js"></script>
+  <script src="createShapes.js"></script>
+</body>
+</html>
